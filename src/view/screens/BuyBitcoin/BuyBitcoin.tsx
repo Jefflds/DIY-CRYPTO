@@ -61,13 +61,13 @@ export default function BuyBitcoinAndCheckout() {
 
   const handleNextStep = () => {
     const numericValue = parseInt(brlAmount.replace(/\D/g, ''), 10);
-    if (numericValue >= 200 && numericValue <= 5000) {
+    if (numericValue >= 700 && numericValue <= 5000) {
       localStorage.setItem('brlAmount', brlAmount);
       localStorage.setItem('btcAmount', btcAmount);
       navigate(ROUTES.buyCheckout.call(currentLang));
     } else {
       alert(
-        'O valor deve ser maior que R$200 e menor que R$5000 para prosseguir.',
+        'O valor deve ser maior que R$700 e menor que R$5000 para prosseguir.',
       );
     }
   };
